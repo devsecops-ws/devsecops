@@ -84,11 +84,11 @@ Username = your GitHub username. Password = your **token**.
 
 ---
 
-## Lab 1: Secrets scanning (25 min)
+## Lab 1: Secrets scanning
 
-**Idea:** a secret committed to git stays in history forever, even after you delete it from the code.
+**Idea:** A secret committed to git stays in history forever, even after you delete it from the code.
 
-**Break:** find the hardcoded key.
+**Break:** Find the hardcoded key.
 
 ```bash
 grep -n "INTERNAL_API_KEY" app/app.py
