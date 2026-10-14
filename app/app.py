@@ -9,6 +9,7 @@ Planted issues (for the labs):
   5. Old vulnerable dependencies         -> Lab 3 (SCA)
   6. Old base image, root user           -> Lab 4 (container)
 """
+import os
 import sqlite3
 
 from flask import Flask, request
@@ -16,7 +17,7 @@ from flask import Flask, request
 app = Flask(__name__)
 
 # Lab 1: fake key, not valid anywhere. Students will find it with Gitleaks.
-INTERNAL_API_KEY = "REMOVED"
+INTERNAL_API_KEY = "os.environ.get("INTERNAL_API_KEY", "")"
 
 DB_PATH = ":memory:"
 
